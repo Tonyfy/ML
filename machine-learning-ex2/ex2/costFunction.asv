@@ -21,9 +21,9 @@ grad = zeros(size(theta));
 %
 acv = sigmoid(X*theta);
 J = (1/m)*sum(-1*y.*log(acv)-1*(1-y).*log(1-acv));
-% grad(1) = (1/m)*sum(acv-y)*1;
-for i=1:size(theta)
-    grad(i) = (1/m)*sum((acv-y).*X(:,i));
+grad(1) = (1/m)*sum(acv-y)*1;
+for i=1:m
+    grad(i+1) = (1/m)*sum((acv-y)*X[i+1]);
 end
 
 
