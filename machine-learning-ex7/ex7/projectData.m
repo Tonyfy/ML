@@ -16,7 +16,8 @@ Z = zeros(size(X, 1), K);
 %               eigenvector is given as follows:
 %                    x = X(i, :)';
 %                    projection_k = x' * U(:, k);
-%
+%  Z is K dim 
+Z = X*U(:,1:K);
 
 
 
